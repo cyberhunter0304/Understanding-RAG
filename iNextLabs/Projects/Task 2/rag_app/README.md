@@ -17,23 +17,8 @@ The application follows a standard **RAG pipeline**:
 
 ### High-Level Architecture
 
-```
-┌──────────┐        ┌──────────────┐        ┌────────────┐
-│  Client  │ ─────▶ │  FastAPI API │ ─────▶ │  Retriever │
-│ (CLI /  │        │   (/chat)    │        │  (FAISS)   │
-│  HTTP)  │        └──────────────┘        └─────┬──────┘
-└──────────┘                                      │
-                                                  ▼
-                                         ┌────────────────┐
-                                         │  Context Chunks│
-                                         └─────┬──────────┘
-                                               ▼
-                                      ┌────────────────────┐
-                                      │   LLM (OpenRouter) │
-                                      └─────────┬──────────┘
-                                                ▼
-                                         Generated Answer
-```
+<img width="521" height="621" alt="Understanding RAG New drawio" src="https://github.com/user-attachments/assets/73473d50-ceb6-455a-9df4-7d0f4d44d2d3" />
+
 
 ### Component Interaction
 
