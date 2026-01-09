@@ -1,7 +1,0 @@
-fastapi
-uvicorn
-faiss-cpu
-numpy
-requests
-python-dotenv
-pydantic
